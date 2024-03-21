@@ -17,18 +17,25 @@
 ### 建立容器
 1. 建立
   ```bash
-  docker create --name mynginx -p 8080:80 nginx:latest
+  docker create --name <容器名> -p 8080:80 nginx:latest
   ```
 2. 建立並執行
   ```bash
-  docker run -d --name mynginx -p 8080:80 nginx:latest
+  docker run -d --name <容器名> -p 8080:80 nginx:latest
   ```
 3. 不監聽port
   ```bash
-  docker run -d --name mynginx nginx:latest
+  docker run -d --name <容器名> nginx:latest
   ```
 ### 刪除容器
 1. 刪除
   ```bash
   docker rm <容器名orID>
   ```
+### 容器交互命令
+1. 透過命令進行容器交互
+  ```bash
+  docker exec -it <容器名orID> /bin/bash
+  ```
+
+
